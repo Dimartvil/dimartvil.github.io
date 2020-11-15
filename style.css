@@ -1,0 +1,36 @@
+:root{
+    --h1_fontSize: 2.2rem;
+    --h1_fontWeight: bolder;
+    --h2_fontSize: 2rem;
+    --h2_fontWeight: bold;
+    --h3_fontSize: 1.8rem;
+    --regular_fontSize: 1.6rem;
+    --primary_color: #39A3FA;
+    --second_color: #0E283D;
+    --third_color: #2B7ABA;
+    --forth_color: #1C507A;
+    --white: #fff;
+    --black: #000;
+
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Acme', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: var(--regular_fontSize);
+}
+
+header{
+    background-color: var(--primary_color);
+}
