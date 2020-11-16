@@ -3,7 +3,7 @@
     --h2_fontSize: 2.4rem;
     --h3_fontSize: 1.8rem;
     --regular_fontSize: 1.7rem;
-    --mobile_fontSize:1rem;
+    --mobile_fontSize:1.5rem;
     --primary_color: #39A3FA;
     --second_color: #0E283D;
     --third_color: #2B7ABA;
@@ -53,6 +53,7 @@ hr{
 
 header{
     width: 100%;
+    max-height: 59px;
     background-color: var(--forth_color);
     display: flex;
     justify-content: space-between;
@@ -162,17 +163,19 @@ background-color: rgba(0,0,0,.85);
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        text-shadow: 1px 1px 1px rgb(51, 8, 243);
+        text-shadow: 1px 1px 1px rgb(3, 1, 15);
     }
     .hero-filter span{
-        font-size: var(--h1_fontSize);
+        font-size: 5rem;
     }
     .hero-filter h1, .hero-filter h2{
         color: var(--white);
+        font-size: 5rem;
     }
     .hero-filter h1 span,
     .hero-filter h2:last-child{
         color: var(--primary_color);
+        font-size: 5rem;
     }
 
     /* End of hero styles */
@@ -231,7 +234,7 @@ background-color: rgba(0,0,0,.85);
     }
 
     .degree .entity{    
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         font-weight: bolder;
         color: var(--second_color);
 
