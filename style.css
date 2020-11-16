@@ -1,8 +1,6 @@
 :root{
-    --h1_fontSize: 2.2rem;
-    --h1_fontWeight: bolder;
-    --h2_fontSize: 2rem;
-    --h2_fontWeight: bold;
+    --h1_fontSize: 2.6rem;
+    --h2_fontSize: 2.4rem;
     --h3_fontSize: 1.8rem;
     --regular_fontSize: 1.6rem;
     --mobile_fontSize: .9rem;
@@ -30,16 +28,25 @@ html{
 
 body{
     font-size: var(--regular_fontSize);
-    font-family: var(--regularFont);
+    font-family: var(--featureFont);
 }
 
+h1{
+    font-size: var(--h1_fontSize);
+    font-weight:bolder;
+}
+
+h2{
+    font-size: var(--h2_fontSize);
+    font-weight:bolder;
+}
 /* End of general styles */
 
 /* Start of header styles */
 
 header{
     width: 100%;
-    background-color: var(--primary_color);
+    background-color: var(--forth_color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,7 +58,14 @@ header{
 }
 .brand{
     font-family: var(--featureFont);
+    transition: .7s;
 }
+
+.brand:hover{
+    font-size: 1rem;
+    color: var(--primary_color)
+}
+
 header nav{
     display: flex;
     flex-direction: column;
@@ -60,11 +74,11 @@ header nav{
 
 header nav ul, .menu{
     width: 100%;
-    background-color: var(--primary_color);
+    background-color: var(--forth_color);
     position: absolute;
     top:-500px;
     left: 0;
-    transition: .7s;
+    transition: .5s;
 
 }
 
@@ -96,10 +110,56 @@ header nav ul li:hover {
     cursor: pointer;
     padding: 10px;
     font-family: var(--featureFont);
+    transition: .5s;
+}
+#menu_button:hover{
+    font-size: 1rem;
+    color: var(--primary_color)
 }
 
 /* End of header styles */
 
 /* Start of main styles */
 
+.main{
+    display: flex;
+    
+    
+}
+
     /* Start of hero styles */
+
+    .hero{
+        background-color: var(--forth_color);
+        height: 400px;
+        background-image: url('./img/pexels-negative-space-169573.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family:'Poppins', sans-serif;
+    }
+    .hero-filter{
+        height: 100%;
+        width: 100%;
+        background-color: rgba(255,255,255,.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-shadow: 1px 1px 1px rgb(51, 8, 243);
+    }
+    .hero span{
+        font-size: var(--h1_fontSize);
+    }
+    .hero h1, .hero h2{
+        color: var(--white);
+    }
+    .hero h1 span,
+    .hero-filter h2:last-child{
+        color: var(--primary_color);
+    }
+
+    /* End of hero styles */
