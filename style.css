@@ -40,6 +40,13 @@ h2{
     font-size: var(--h2_fontSize);
     font-weight:bolder;
 }
+
+hr{
+    color: rgba(107, 107, 107, 0.5);
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
 /* End of general styles */
 
 /* Start of header styles */
@@ -52,10 +59,11 @@ header{
     align-items: center;
     position: relative;
     padding: 10px;
-    height: 50px;
     font-size: var(--mobile_fontSize);
-    color: var(--white)
+    color: var(--white);
+    transition: 1s;
 }
+
 .brand{
     font-family: var(--featureFont);
     transition: .7s;
@@ -69,7 +77,6 @@ header{
 header nav{
     display: flex;
     flex-direction: column;
-    
 }
 
 header nav ul, .menu{
@@ -79,7 +86,6 @@ header nav ul, .menu{
     top:-500px;
     left: 0;
     transition: .5s;
-
 }
 
 .menu.active{
@@ -114,7 +120,11 @@ header nav ul li:hover {
 }
 #menu_button:hover{
     font-size: 1rem;
-    color: var(--primary_color)
+    color: var(--primary_color);
+}
+
+.dark{
+background-color: rgba(0,0,0,.85)
 }
 
 /* End of header styles */
@@ -122,16 +132,15 @@ header nav ul li:hover {
 /* Start of main styles */
 
 .main{
-    display: flex;
-    
-    
+    display: flex;  
 }
 
     /* Start of hero styles */
 
     .hero{
         background-color: var(--forth_color);
-        height: 400px;
+        height: 700px;
+        width: 100%;
         background-image: url('./img/pexels-negative-space-169573.jpg');
         background-repeat: no-repeat;
         background-size: cover;
@@ -140,10 +149,14 @@ header nav ul li:hover {
         align-items: center;
         justify-content: center;
         font-family:'Poppins', sans-serif;
+        position: fixed;
+        top: 0;
+        z-index: -1;
     }
     .hero-filter{
-        height: 100%;
+        height: 600px;
         width: 100%;
+        background: none;
         background-color: rgba(255,255,255,.1);
         display: flex;
         flex-direction: column;
@@ -151,15 +164,81 @@ header nav ul li:hover {
         align-items: center;
         text-shadow: 1px 1px 1px rgb(51, 8, 243);
     }
-    .hero span{
+    .hero-filter span{
         font-size: var(--h1_fontSize);
     }
-    .hero h1, .hero h2{
+    .hero-filter h1, .hero-filter h2{
         color: var(--white);
     }
-    .hero h1 span,
+    .hero-filter h1 span,
     .hero-filter h2:last-child{
         color: var(--primary_color);
     }
 
     /* End of hero styles */
+
+    /* Start of about styles */
+    .about{
+        width: 100%;
+        background-color: var(--white);
+        font-family: var(--regularFont);
+        padding:100px 10px;
+    }
+
+    /* .about .me, .about .education{
+        padding-top: 100px;
+    } */
+
+    .about .me p, .about .me ul{
+        font-size: var(--mobile_fontSize);
+        list-style: none;
+    }
+
+    .about .me p{
+        margin-top: 20px;
+    }
+    .about .me ul{
+        margin-top: 30px;
+    }
+
+    .about .description{
+        font-weight: bold;
+    }
+
+    .about .data{
+        color: var(--third_color);
+        padding-left: 20px;
+    }
+
+    .about .education{
+        padding-top: 50px;
+    }
+
+    .education .degree{
+        display: block;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .degree .date{
+        color: var(--third_color);
+        font-weight: bold;
+    }
+
+    .degree .entity{    
+        font-size: 1.1rem;
+        font-weight: bolder;
+        color: var(--second_color);
+
+    }
+    .degree h3{    
+        font-size: var(--regularFont);
+        margin-top: 10px;
+    }
+
+    .resume{
+        height: 500px;
+        background-color: var(--primary_color);
+        font-family: var(--regularFont);
+    }
+
