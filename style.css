@@ -5,22 +5,23 @@
     --h2_fontWeight: bold;
     --h3_fontSize: 1.8rem;
     --regular_fontSize: 1.6rem;
+    --mobile_fontSize: .9rem;
     --primary_color: #39A3FA;
     --second_color: #0E283D;
     --third_color: #2B7ABA;
     --forth_color: #1C507A;
     --white: #fff;
     --black: #000;
-
-
+    --featureFont:'Acme', sans-serif;
+    --regularFont:'Poppins', sans-serif;
 }
 
-
+/* Start of general styles */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Acme', sans-serif;
+    
 }
 
 html{
@@ -29,8 +30,76 @@ html{
 
 body{
     font-size: var(--regular_fontSize);
+    font-family: var(--regularFont);
 }
 
+/* End of general styles */
+
+/* Start of header styles */
+
 header{
+    width: 100%;
     background-color: var(--primary_color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+    height: 50px;
+    font-size: var(--mobile_fontSize);
+    color: var(--white)
 }
+.brand{
+    font-family: var(--featureFont);
+}
+header nav{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+header nav ul, .menu{
+    width: 100%;
+    background-color: var(--primary_color);
+    position: absolute;
+    top:-500px;
+    left: 0;
+    transition: .7s;
+
+}
+
+.menu.active{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50px;
+}
+
+header nav ul li{
+    list-style: none;
+    width: 100%;
+}
+
+header nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--white)
+}
+header nav ul li:hover {
+    background-color: var(--third_color);
+}
+
+#menu_button{
+    height: inherit;
+    cursor: pointer;
+    padding: 10px;
+    font-family: var(--featureFont);
+}
+
+/* End of header styles */
+
+/* Start of main styles */
+
+    /* Start of hero styles */
