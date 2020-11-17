@@ -283,3 +283,61 @@ background-color: rgba(0,0,0,.85);
 
         /* Start of experience styles */
 
+        .experience .positions {
+            padding: 0;
+        }
+            /*Reuse of the about styles*/
+        /* End of experience styles */
+        
+        
+        /* Start of portfolio styles */
+
+        .portfolio{
+           width: 100%;
+           background-color: var(--white);
+           font-family: var(--regularFont);
+        }
+
+        .portfolio h2 {
+            padding: 20px;
+        }
+        .project{
+            height: 300px;
+            width: 100%;
+            background-color: var(--primary_color);
+        }
+
+        .project a{
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            background-color: rgba(0,0,0,0);
+            transition: .5s;
+            text-decoration: none;
+            color: var(--white);
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            /* font-family: var(--regularFont); */
+        }
+
+        .project a:hover{
+            background-color: rgba(22, 103, 233, 0.5);
+        }
+
+        .project .project_title{
+            padding: 10px 0;
+        }
+
+
+
+        #google{
+            background-image: url('./img/Google_clone.PNG');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        /* End of portfolio styles */
+
