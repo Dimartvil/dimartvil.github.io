@@ -32,6 +32,11 @@ function darkFixedMenu(entries){
 }
 
 
+/*Función para cerrar el menú después de hacer click */
 
-
+window.onclick = event => {
+    if(event.target !== $MENU_BUTTON){
+        $MENU.classList.remove('active')
+    } 
+}
 

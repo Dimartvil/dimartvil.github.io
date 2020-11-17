@@ -24,6 +24,7 @@
 
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -123,9 +124,13 @@ header nav ul li:hover {
     color: var(--primary_color);
 }
 
-.dark{
+.dark, .dark ul li a {
 background-color: rgba(0,0,0,.85);
 }
+
+.dark ul li a, .dark ul {
+    background-color:rgba(0,0,0,0);
+    }
 
 /* End of header styles */
 
@@ -449,6 +454,46 @@ background-color: rgba(0,0,0,.85);
                 max-width: 1200px;
                 margin: 0 auto;
             }
+
+            header{
+                display: flex;
+                justify-content: space-around;
+            }
+
+            header .brand {
+                width: 30%;
+            }
+
+            header nav {
+                width: 70%;
+                background: transparent;
+            }
+
+            header nav ul, .menu{
+                position: static;
+                top:0;
+                left: 0;
+                transition: .5s;
+                display: flex;
+                justify-content: flex-end;
+                font-family: var(--regular_fontSize);
+                font-size: var(--h3_fontSize);
+            }
+
+            header #menu_button{
+                display: none;
+            }
+            .brand{
+                font-size: var(--h1_fontSize);
+            }
+            .brand:hover{
+                font-size: var(--h1_fontSize);
+            }
+
+            header.dark a, header nav ul li a{
+                background-color: transparent;
+                padding: 18px;
+                }
         }
 
         
@@ -515,7 +560,7 @@ background-color: rgba(0,0,0,.85);
                 flex-direction: row;
                 font-size: var(--regular_fontSize);
             }
-
-
+ 
+            
         }
         
