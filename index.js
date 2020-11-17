@@ -12,7 +12,7 @@ $MENU_BUTTON.addEventListener('click', ()=> {
 
 /*Función para controlar la animación por scroll del menú*/
 
-const observerOptions = 0.25
+const observerOptions = 0.01
 
 const observer = new IntersectionObserver(darkFixedMenu, {threshold: observerOptions})
 
