@@ -128,9 +128,7 @@ header nav ul li:hover {
 background-color: rgba(0,0,0,.85);
 }
 
-.dark ul li a, .dark ul {
-    background-color:rgba(0,0,0,0);
-    }
+
 
 /* End of header styles */
 
@@ -493,6 +491,10 @@ background-color: rgba(0,0,0,.85);
             header.dark a, header nav ul li a{
                 background-color: transparent;
                 padding: 18px;
+                }
+
+            .dark ul li a, .dark ul {
+                background-color:rgba(0,0,0,0);
                 }
         }
 
