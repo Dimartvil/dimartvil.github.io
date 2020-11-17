@@ -143,11 +143,11 @@ background-color: rgba(0,0,0,.85);
         height: 700px;
         width: 100%;
         background-image: url('./img/pexels-negative-space-169573.jpg');
-        background-attachment: fixed;
+        /* background-attachment: fixed; */
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        position: absolute;
+        position: fixed;
         top: 0;
         z-index: -5;
     }
@@ -178,7 +178,7 @@ background-color: rgba(0,0,0,.85);
     /* End of hero styles */
 
     /* Start of about styles */
-    .about{
+    .about, .experience{
         width: 100%;
         background-color: var(--white);
         font-family: var(--regularFont);
@@ -207,13 +207,13 @@ background-color: rgba(0,0,0,.85);
         padding-left: 20px;
     }
 
-    .about .education{
+    .about .education, .experience .positions{
         padding-top: 50px;
     }
     .education h2{
         margin: 20px 0;
     }
-    .education .degree{
+    .education .degree, .positions .position{
         display: block;
         width: 100%;
         min-height: 100px;
@@ -222,18 +222,18 @@ background-color: rgba(0,0,0,.85);
         justify-content: space-around;
     }
 
-    .degree .date{
+    .degree .date, .positions .date{
         color: var(--third_color);
         font-weight: bold;
     }
 
-    .degree .entity{    
+    .degree .entity, .positions .entity{    
         font-size: 1.5rem;
         font-weight: bolder;
         color: var(--second_color);
 
     }
-    .degree h3{    
+    .degree h3, .position h3{    
         font-size: var(--regularFont);
     }
     /* End of about styles */
@@ -278,3 +278,8 @@ background-color: rgba(0,0,0,.85);
         color: var(--white);
         padding: 15px;
     } 
+
+        /* End of resume styles */
+
+        /* Start of experience styles */
+
