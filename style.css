@@ -39,7 +39,6 @@ h1{
 h2{
     font-size: var(--h2_fontSize);
     font-weight:bolder;
-    
 }
 
 hr{
@@ -178,6 +177,11 @@ background-color: rgba(0,0,0,.85);
     /* End of hero styles */
 
     /* Start of about styles */
+
+    .about-wrapper{
+        width: 100%;
+        background-color: var(--white);
+    }
     .about, .experience{
         width: 100%;
         background-color: var(--white);
@@ -212,6 +216,7 @@ background-color: rgba(0,0,0,.85);
     }
     .education h2{
         margin: 20px 0;
+        padding-bottom: 30px;
     }
     .education .degree, .positions .position{
         display: block;
@@ -239,13 +244,21 @@ background-color: rgba(0,0,0,.85);
     /* End of about styles */
 
     /* Start of resume styles */
-    .resume{
+
+    .resume-wrapper{
         width: 100%;
+        background-color: var(--primary_color);
+    }
+    .resume{
+        max-width: 1200px;
+        margin: 0 auto;
         background-color: var(--primary_color);
         font-family: var(--regularFont);
         padding:100px 20px;
     }
-
+    .resume h2{
+        padding-bottom: 30px;
+    }
     .resume .courses{
         list-style: none;
         display: flex;
@@ -268,9 +281,9 @@ background-color: rgba(0,0,0,.85);
         padding: 10px;
         margin: 5px;
         border-radius: 10px;
-        transition: .7s;
+        transition: .3s;
         color: var(--black);
-        font-family: var(--featureFont);
+        
     } 
 
     .resume .course a:hover{
@@ -282,7 +295,18 @@ background-color: rgba(0,0,0,.85);
         /* End of resume styles */
 
         /* Start of experience styles */
+        .experience-wrapper{
+            width: 100%;
+            background-color: var(--white);
+        }
+        .experience{
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
+        .experience h2{
+            padding-bottom: 30px;
+        }
         .experience .positions {
             padding: 0;
         }
@@ -291,27 +315,44 @@ background-color: rgba(0,0,0,.85);
         
         
         /* Start of portfolio styles */
+        .portfolio-wrapper{
+            background-color: white;
+            width: 100%;
+        }
 
+        .portfolio-title-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .portfolio-title-wrapper h2 {
+            padding: 50px 0;
+            padding-left: 20px;
+            padding-top:100px;
+        }
         .portfolio{
            width: 100%;
            background-color: var(--white);
            font-family: var(--regularFont);
+           display: flex;
+           flex-wrap: wrap;
         }
 
-        .portfolio h2 {
-            padding: 20px;
-        }
+
         .project{
             height: 300px;
             width: 100%;
             background-color: var(--primary_color);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
         }
 
         .project a{
             width: 100%;
             height: 100%;
             cursor: pointer;
-            background-color: rgba(0,0,0,0);
+            background-color: rgba(22, 103, 233, 0.5);
             transition: .5s;
             text-decoration: none;
             color: var(--white);
@@ -324,7 +365,7 @@ background-color: rgba(0,0,0,.85);
         }
 
         .project a:hover{
-            background-color: rgba(22, 103, 233, 0.5);
+            background-color: rgba(0,0,0,0);
         }
 
         .project .project_title{
@@ -333,9 +374,148 @@ background-color: rgba(0,0,0,.85);
 
         #google{
             background-image: url('./img/Google_clone.PNG');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
+        }
+
+        #faq_accordion{
+            background-image: url('./img/FAQ_accordion.PNG');    
         }
         /* End of portfolio styles */
 
+        footer{
+            font-family: var(--regularFont);
+            font-size: 1.2rem;
+            color: var(--white);
+            width: 100%;
+            height: 100px;
+            background-color: var(--forth_color);  
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        @media (min-width: 680px){
+
+            footer{
+                font-size: var(--mobile_fontSize);
+            }
+
+            .me{
+                display: initial;
+                width: 60%;
+            }
+
+
+            .me p{
+                width: 80%;
+                margin: 0;
+            }
+
+            .me ul{
+                width: 80%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .me li{
+                padding-top: 15px;
+            }
+
+            .about{
+                display: flex;
+                justify-content: space-evenly;
+            }
+
+            .about .education{
+                padding: 0;
+            }
+            .education h2{
+                margin:0;
+            }
+
+            hr{
+                margin: 15px 0;
+            }
+
+        }
+
+        @media (min-width: 1000px){
+            .project{
+                width: 50%;
+            }
+
+            .about{
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+        }
+
+        
+        @media (min-width: 1200px){
+            .hero-filter{
+                flex-direction: row;
+            }
+            .hero-filter > *{
+                padding: 0 15px;
+            }
+            .hero-filter span{
+                font-size: 7rem;
+            }
+            .hero-filter h1, .hero-filter h2{
+                color: var(--white);
+                font-size: 7rem;
+            }
+            .hero-filter h1 span,
+            .hero-filter h2:last-child{
+                color: var(--primary_color);
+                font-size: 7rem;
+            }
+            .project{
+                width: 25%;
+            } 
+
+            .positions{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+            .positions h2{
+                width: 100%;
+            }
+
+            .positions .position{
+                width: 40%;
+                margin: 20px;
+                padding: 0;
+            }
+
+            hr{
+                display: none;
+            }
+            .courses{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .course{
+                margin: 0;
+                font-size: var(--h3_fontSize) ;
+                opacity: 70%;
+            }
+
+            .course:hover{
+                opacity: 100%;
+                background-color: var(--white);
+            }
+
+            footer{
+                flex-direction: row;
+                font-size: var(--regular_fontSize);
+            }
+
+
+        }
+        
