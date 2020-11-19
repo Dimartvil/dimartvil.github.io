@@ -382,6 +382,10 @@ background-color: rgba(0,0,0,.85);
         #faq_accordion{
             background-image: url('./img/FAQ_accordion.PNG');    
         }
+
+        #poke_api{
+            background-image: url('./img/PokeApi_App.PNG');    
+        }
         /* End of portfolio styles */
 
         footer{
