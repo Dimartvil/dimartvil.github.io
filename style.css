@@ -386,6 +386,10 @@ background-color: rgba(0,0,0,.85);
         #poke_api{
             background-image: url('./img/PokeApi_App.PNG');    
         }
+
+        #js_game{
+            background-image: url('./img/Juego_JS.PNG');    
+        }
         /* End of portfolio styles */
 
         footer{
